@@ -56,14 +56,14 @@ terraform destroy
 Internet
      │
      │
-Elastic IP
+Elastic IP           <- 리소스 할당 생성
      │
 ┌──────────────┐
 │     EC2      │
-│ AmazonLinux2 │
+│ AmazonLinux2 │     <- 아마존 리눅스 사용/ec2-user
 └──────────────┘
      │
-Security Group
+Security Group       <- 보안 그룹, 인바운드(ssh-22), 아웃바운드(전체)
      │
-VPC(Default)
+VPC(Default)         <- 클라우드내 사설 클라우드, 기본(default)를 사용
 ```
