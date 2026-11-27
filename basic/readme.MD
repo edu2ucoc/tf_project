@@ -294,6 +294,8 @@ Changes to Outputs:
 ```
 terraform apply
 ```
+
+
 - step5 : 테라폼 삭제
 ```
 terraform destroy
