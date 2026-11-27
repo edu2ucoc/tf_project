@@ -60,6 +60,80 @@ Changes to Outputs:
 
 You can apply this plan to save these new output values to the Terraform state, without changing any real
 infrastructure.
+----------------------------------------------
+Terraform used the selected providers to generate the following execution plan. Resource actions are
+indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_security_group.ai-cp2-15-sg will be created
+  + resource "aws_security_group" "ai-cp2-15-sg" {
+      + arn                    = (known after apply)
+      + description            = "ai-cp2-15 security group"
+      + egress                 = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + from_port        = 0
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "-1"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 0
+                # (1 unchanged attribute hidden)
+            },
+        ]
+      + id                     = (known after apply)
+      + ingress                = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + description      = "HTTP"
+              + from_port        = 80
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 80
+            },
+          + {
+              + cidr_blocks      = [
+                  + "222.108.125.33/32",
+                ]
+              + description      = "SSH"
+              + from_port        = 22
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 22
+            },
+        ]
+      + name                   = "ai-cp2-15-sg"
+      + name_prefix            = (known after apply)
+      + owner_id               = (known after apply)
+      + region                 = "ap-northeast-2"
+      + revoke_rules_on_delete = false
+      + tags_all               = (known after apply)
+      + vpc_id                 = "vpc-0eebee125226fd6c5"
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.   <= 체크 포인트
+
+Changes to Outputs:
+  + default_subnets_ids = [
+      + "subnet-049c8f72bb109a11e",
+      + "subnet-0cc79271aae2ac523",
+      + "subnet-0928223142a64ef05",
+      + "subnet-011432f9b62dee9b6",
+    ]
+  + default_vpc_id      = "vpc-0eebee125226fd6c5"
 ```
 
 
