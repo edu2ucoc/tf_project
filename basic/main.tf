@@ -87,7 +87,7 @@ data "aws_ami" "amazon_linux" {
   # 필터링
   filter {
     name = "name"
-    values = ["al2003-ami-*"]
+    values = ["al2023-ami-*"]
   }
   # 필터 추가
   filter {
