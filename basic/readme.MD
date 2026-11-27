@@ -39,6 +39,11 @@ terraform init
 terraform validate
 ```
 
+- 옵션 : 형식 맞추기
+```
+terraform fmt
+```
+
 - step3 : 실행 계획 확인 (플래닝, 시뮬레이션)
 ```
 terraform plan
