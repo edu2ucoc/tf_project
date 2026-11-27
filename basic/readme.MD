@@ -50,3 +50,20 @@ terraform apply
 ```
 terraform destroy
 ```
+
+# 목표 인프라 시스템
+```
+Internet
+     │
+     │
+Elastic IP
+     │
+┌──────────────┐
+│     EC2      │
+│ AmazonLinux2 │
+└──────────────┘
+     │
+Security Group
+     │
+VPC(Default)
+```
