@@ -2,21 +2,21 @@
 # 1. vpc 정보 출력
 output "default_vpc_id" {
   description = "서울 리전의 기본 vpc의 id"
-  value = data.aws_vpc.default.id
+  value       = data.aws_vpc.default.id
 }
 
 
 # 2. 서브넷 정보 출력
 output "default_subnets_ids" {
   description = "서울 리전의 기본 vpc의 속한 서브넷들의 id 리스트"
-  value = data.aws_subnets.default.ids
+  value       = data.aws_subnets.default.ids
 }
 
 
 # 3. AMI 아이디 출력
 output "aws_ami_amazon_linux_id" {
   description = "아마존 리눅스 ami id"
-  value = data.aws_ami.amazon_linux.id
+  value       = data.aws_ami.amazon_linux.id
 }
 
 # 4. eip 출력
